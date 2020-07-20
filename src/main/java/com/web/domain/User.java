@@ -28,18 +28,18 @@ public class User {
     private String email;
 
     @Column
-    private LocalDateTime createDate;
+    private LocalDateTime createdDate;
 
     @Column
-    private LocalDateTime updateDate;
+    private LocalDateTime updatedDate;
 
     @Builder
-    public User(Long idx, String name, String password, String email, LocalDateTime createDate, LocalDateTime updateDate) {
+    public User(Long idx, String name, String password, String email, LocalDateTime createdDate, LocalDateTime updatedDate) {
         this.idx = idx;
         this.name = name;
         this.password = password;
         this.email = email;
-        this.createDate = createDate;
-        this.updateDate = updateDate;
+        this.createdDate = createdDate;
+        this.updatedDate = updatedDate;
     }
 }
