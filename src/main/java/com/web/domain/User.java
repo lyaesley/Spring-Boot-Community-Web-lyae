@@ -42,8 +42,7 @@ public class User {
     private SocialType socialType;
 
     @Builder
-    public User(Long idx, String name, String password, String email, String principal, SocialType socialType, LocalDateTime createdDate, LocalDateTime updatedDate) {
-        this.idx = idx;
+    public User(String name, String password, String email, String principal, SocialType socialType, LocalDateTime createdDate, LocalDateTime updatedDate) {
         this.name = name;
         this.password = password;
         this.email = email;

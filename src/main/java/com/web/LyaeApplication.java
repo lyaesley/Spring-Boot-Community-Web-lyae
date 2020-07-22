@@ -35,12 +35,12 @@ public class LyaeApplication extends WebMvcConfigurerAdapter {
 
     //처음 배우는 스프링 부트 2 책 내용 page.112  //옛날방식인듯.. 최신방식 @EventListener (재현하려 했으나 bean 주입하는 법을 몰라서 포기
     @Bean
-    public ApplicationRunner runner(UserRepository userRepository, BoardRepository boardRepository) throws Exception {
+    public ApplicationRunner runner(UserRepository userRepository, BoardRepository boardRepository) {
         return (args) -> {
             User user = userRepository.save(User.builder()
-                    .name("havi")
+                    .name("JUN YOUNG")
                     .password("test")
-                    .email("havi@gmail.com")
+                    .email("lyaesley@gmail.com")
                     .createdDate(LocalDateTime.now())
                     .build());
 

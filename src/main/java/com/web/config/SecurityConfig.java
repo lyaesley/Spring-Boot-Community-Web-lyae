@@ -3,7 +3,6 @@ package com.web.config;
 import com.web.domain.enums.SocialType;
 import com.web.oauth.ClientResources;
 import com.web.oauth.UserTokenService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -28,9 +27,7 @@ import javax.servlet.Filter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.web.domain.enums.SocialType.FACEBOOK;
-import static com.web.domain.enums.SocialType.GOOGLE;
-import static com.web.domain.enums.SocialType.KAKAO;
+import static com.web.domain.enums.SocialType.*;
 
 @Configuration
 @EnableWebSecurity
@@ -47,6 +44,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
                 .antMatchers("/", "/login/**", "/css/**", "/images/**", "/js/**", "/console/**").permitAll()
+                .antMatchers("/facebook").hasAuthority(FACEBOOK.getRoleType())
+                .antMatchers("/google").hasAuthority(GOOGLE.getRoleType())
+                .antMatchers("/kakao").hasAuthority(KAKAO.getRoleType())
                 .anyRequest().authenticated()
             .and()
                 .headers().frameOptions().disable()
