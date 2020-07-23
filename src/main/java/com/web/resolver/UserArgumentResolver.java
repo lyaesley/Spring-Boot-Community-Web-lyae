@@ -76,7 +76,7 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
                 .name(map.get("nickname"))
                 .email(map.get("kaccount_eamil"))
                 .principal(String.valueOf(map.get("id")))
-                .socialType(KAKAO)
+                .socialType(socialType)
                 .createdDate(LocalDateTime.now())
                 .build();
     }

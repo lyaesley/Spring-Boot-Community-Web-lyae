@@ -41,7 +41,7 @@ google :
 
 kakao :
   client :
-    clientId :
+    clientId : 9152903591a3cd1b674f8c7231a3ba76
     accessTokenUri: https://kauth.kakao.com/oauth/token
     userAuthorizationUri: https://kauth.kakao.com/oauth/authorize
   resource:
