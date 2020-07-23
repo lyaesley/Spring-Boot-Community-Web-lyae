@@ -40,7 +40,7 @@ public class LyaeApplication extends WebMvcConfigurerAdapter {
             User user = userRepository.save(User.builder()
                     .name("JUN YOUNG")
                     .password("test")
-                    .email("lyaesley@gmail.com")
+                    .email("test@gmail.com")
                     .createdDate(LocalDateTime.now())
                     .build());
 

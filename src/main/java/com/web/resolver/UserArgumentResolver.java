@@ -73,8 +73,8 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 
     private User getModernUser(SocialType socialType, Map<String, String> map) {
         return User.builder()
-                .name(map.get("nickname"))
-                .email(map.get("kaccount_eamil"))
+                .name(map.get("name"))
+                .email(map.get("email"))
                 .principal(String.valueOf(map.get("id")))
                 .socialType(socialType)
                 .createdDate(LocalDateTime.now())
@@ -85,7 +85,7 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
         HashMap<String, String> propertyMap = (HashMap<String, String>)(Object)map.get("properties");
         return User.builder()
                 .name(propertyMap.get("nickname"))
-                .email(map.get("kaccount_eamil"))
+                .email(map.get("kaccount_email"))
                 .principal(String.valueOf(map.get("id")))
                 .socialType(KAKAO)
                 .createdDate(LocalDateTime.now())

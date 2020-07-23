@@ -82,7 +82,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         filters.add(oauth2Filter(facebook(), "/login/facebook", FACEBOOK));
         filters.add(oauth2Filter(google(), "/login/google", GOOGLE));
         filters.add(oauth2Filter(kakao(), "/login/kakao", KAKAO));
-        filter.setFilters(filters) ;
+        filter.setFilters(filters);
         return filter;
     }
 

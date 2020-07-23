@@ -1,4 +1,4 @@
-spring:
+#spring:
   #  datasource:
   #    url: jdbc:mysql://
   #    username:
@@ -41,11 +41,11 @@ google :
 
 kakao :
   client :
-    clientId : 9152903591a3cd1b674f8c7231a3ba76
+    clientId: 17d54a2d864515cf1d4d61d1a6b40461
     accessTokenUri: https://kauth.kakao.com/oauth/token
     userAuthorizationUri: https://kauth.kakao.com/oauth/authorize
   resource:
-    userInfoUri: https://kapi.kakao.com/v1/user/me
+    userInfoUri: https://kapi.kakao.com/v2/user/me
 
 # 시크릿 키 보관 방식 실무에서 쓰는 방법
 # 1. 스프링 고유 기능중에 다른 깃에서 설정땡겨오는 기능이있음. (내부 깃으로)
