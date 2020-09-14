@@ -40,7 +40,6 @@ public class Board  implements Serializable {
     private LocalDateTime updatedDate;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
     private User user;
 
 

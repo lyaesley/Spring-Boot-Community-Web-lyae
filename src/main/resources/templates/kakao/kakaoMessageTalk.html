@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+    <a id="kakao-link-btn" href="javascript:sendLink()">
+        <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+    </a>
+</body>
+<script type="text/javascript">
+        Kakao.init('f064191c73dfb9189dff948a0e2e36e7');
+        function sendLink() {
+            Kakao.Link.createCustomButton({
+                container: '#kakao-link-btn',
+                templateId: 36537 ,
+                templateArgs: {
+                    title:
+                        '타이틀 테스트',
+                    description:
+                        '설명 테스트',
+                    url:
+                        '/board/list',
+                    mobUrl:
+                        '/board/list',
+                },
+            })
+        }
+
+</script>
+</html>
